@@ -1,3 +1,5 @@
+package DynamicConnectivity;
+
 import java.util.Arrays;
 
 public class MyDynamicConnectivity {
