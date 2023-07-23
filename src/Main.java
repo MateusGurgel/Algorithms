@@ -1,5 +1,6 @@
 import DynamicConnectivity.MyDynamicConnectivity;
 import DynamicConnectivity.QuickFindUF;
+import DynamicConnectivity.QuickUnionUF;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,6 +8,7 @@ public class Main {
         System.out.print("Hello and welcome! Let's solve some problems");
 
         //My Way
+
         System.out.print("1 - Dynamic Connectivity (my Way) \n");
 
         int[] points = {-1, 0, 1, 2, 3};
@@ -21,7 +23,7 @@ public class Main {
         System.out.println(dc.isConnected(0,3));
         System.out.println(dc.isConnected(1,-1));
 
-        //My Way
+        //Quick Find
         System.out.print("1 - Dynamic Connectivity (Quick Find) \n");
 
         QuickFindUF quickFindUF = new QuickFindUF(5);
@@ -34,12 +36,18 @@ public class Main {
         System.out.println(quickFindUF.isConnected(0,1));
         System.out.println(quickFindUF.isConnected(0,4));
 
+        //Quick union
 
-        //Quick Find
+        System.out.print("1 - Dynamic Connectivity (Quick Union) \n");
 
+        QuickUnionUF quickUnionUF = new QuickUnionUF(5);
 
+        quickUnionUF.union(0, 1);
+        quickUnionUF.union(0, 2);
+        quickUnionUF.union(3, 4);
 
-        //Quick Union
-
+        System.out.println(quickUnionUF.isConnected(1,2));
+        System.out.println(quickUnionUF.isConnected(0,1));
+        System.out.println(quickUnionUF.isConnected(0,4));
     }
 }
