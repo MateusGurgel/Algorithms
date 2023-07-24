@@ -1,3 +1,4 @@
+import DynamicConnectivity.ImprovedQuickUnionUF;
 import DynamicConnectivity.MyDynamicConnectivity;
 import DynamicConnectivity.QuickFindUF;
 import DynamicConnectivity.QuickUnionUF;
@@ -49,5 +50,21 @@ public class Main {
         System.out.println(quickUnionUF.isConnected(1,2));
         System.out.println(quickUnionUF.isConnected(0,1));
         System.out.println(quickUnionUF.isConnected(0,4));
+
+        //Quick union improved
+
+        System.out.print("1 - Dynamic Connectivity (Improved Quick Union) \n");
+
+        ImprovedQuickUnionUF improvedQuickUnionUF = new ImprovedQuickUnionUF(5);
+
+        improvedQuickUnionUF.union(0, 1);
+        improvedQuickUnionUF.union(0, 2);
+        improvedQuickUnionUF.union(3, 4);
+
+        System.out.println(improvedQuickUnionUF.isConnected(1,2));
+        System.out.println(improvedQuickUnionUF.isConnected(0,1));
+        System.out.println(improvedQuickUnionUF.isConnected(0,4));
+
+
     }
 }

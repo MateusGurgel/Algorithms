@@ -9,7 +9,11 @@ public class QuickUnionUF {
     }
 
     private int getRoot(int i){
-        while (i != id[i]) i = id[i];
+        while (i != id[i]) {
+            id[i] = id[id[i]];
+            i = id[i];
+
+        };
         return i;
     }
 
