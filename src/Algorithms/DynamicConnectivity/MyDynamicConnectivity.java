@@ -1,4 +1,4 @@
-package DynamicConnectivity;
+package Algorithms.DynamicConnectivity;
 
 import java.util.Arrays;
 

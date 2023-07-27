@@ -1,4 +1,4 @@
-package DynamicConnectivity;
+package Algorithms.DynamicConnectivity;
 
 public class QuickUnionUF {
     int id[];

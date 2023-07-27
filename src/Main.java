@@ -1,7 +1,8 @@
-import DynamicConnectivity.ImprovedQuickUnionUF;
-import DynamicConnectivity.MyDynamicConnectivity;
-import DynamicConnectivity.QuickFindUF;
-import DynamicConnectivity.QuickUnionUF;
+import Algorithms.DynamicConnectivity.ImprovedQuickUnionUF;
+import Algorithms.DynamicConnectivity.MyDynamicConnectivity;
+import Algorithms.DynamicConnectivity.QuickFindUF;
+import Algorithms.DynamicConnectivity.QuickUnionUF;
+import DataStructures.LinkedStackOfStrings;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +10,7 @@ public class Main {
         System.out.print("Hello and welcome! Let's solve some problems");
 
         //My Way
+        System.out.println();
 
         System.out.print("1 - Dynamic Connectivity (my Way) \n");
 
@@ -25,6 +27,8 @@ public class Main {
         System.out.println(dc.isConnected(1,-1));
 
         //Quick Find
+        System.out.println();
+
         System.out.print("1 - Dynamic Connectivity (Quick Find) \n");
 
         QuickFindUF quickFindUF = new QuickFindUF(5);
@@ -38,6 +42,7 @@ public class Main {
         System.out.println(quickFindUF.isConnected(0,4));
 
         //Quick union
+        System.out.println();
 
         System.out.print("1 - Dynamic Connectivity (Quick Union) \n");
 
@@ -51,6 +56,7 @@ public class Main {
         System.out.println(quickUnionUF.isConnected(0,1));
         System.out.println(quickUnionUF.isConnected(0,4));
 
+        System.out.println();
         //Quick union improved
 
         System.out.print("1 - Dynamic Connectivity (Improved Quick Union) \n");
@@ -64,6 +70,19 @@ public class Main {
         System.out.println(improvedQuickUnionUF.isConnected(1,2));
         System.out.println(improvedQuickUnionUF.isConnected(0,1));
         System.out.println(improvedQuickUnionUF.isConnected(0,4));
+
+        System.out.println();
+        //Stacks (First In, Last out!)
+
+        LinkedStackOfStrings stack = new LinkedStackOfStrings();
+
+        stack.push("LastOut");
+        stack.push("FirstOut");
+
+        System.out.println(stack.pop());
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.pop());
+        System.out.println(stack.isEmpty());
 
 
     }
