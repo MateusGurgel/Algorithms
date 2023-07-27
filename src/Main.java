@@ -3,6 +3,7 @@ import Algorithms.DynamicConnectivity.MyDynamicConnectivity;
 import Algorithms.DynamicConnectivity.QuickFindUF;
 import Algorithms.DynamicConnectivity.QuickUnionUF;
 import DataStructures.LinkedStackOfStrings;
+import DataStructures.LinkedStackOfStringsWithAnArray;
 
 public class Main {
     public static void main(String[] args) {
@@ -84,6 +85,18 @@ public class Main {
         System.out.println(stack.pop());
         System.out.println(stack.isEmpty());
 
+        //Stacks with Array (First In, Last out!)
+        System.out.println();
+
+        LinkedStackOfStringsWithAnArray arrayStack = new LinkedStackOfStringsWithAnArray(2);
+
+        arrayStack.push("LastOut");
+        arrayStack.push("FirstOut");
+
+        System.out.println(arrayStack.pop());
+        System.out.println(arrayStack.isEmpty());
+        System.out.println(arrayStack.pop());
+        System.out.println(arrayStack.isEmpty());
 
     }
 }
