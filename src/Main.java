@@ -4,6 +4,7 @@ import Algorithms.DynamicConnectivity.QuickFindUF;
 import Algorithms.DynamicConnectivity.QuickUnionUF;
 import DataStructures.LinkedStackOfStrings;
 import DataStructures.LinkedStackOfStringsWithAnArray;
+import DataStructures.Queue;
 
 public class Main {
     public static void main(String[] args) {
@@ -97,6 +98,28 @@ public class Main {
         System.out.println(arrayStack.isEmpty());
         System.out.println(arrayStack.pop());
         System.out.println(arrayStack.isEmpty());
+
+        //Queue
+        System.out.println();
+
+        Queue<String> queue = new Queue<String>();
+
+        queue.enqueue("First Out");
+        queue.enqueue("Middle Out");
+        queue.enqueue("Last Out");
+
+        for(String string : queue){
+            System.out.println(string);
+        }
+
+        System.out.println();
+
+        System.out.println(queue.dequeue());
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.isEmpty());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.isEmpty());
 
     }
 }

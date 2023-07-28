@@ -29,9 +29,10 @@ public class LinkedStackOfStringsWithAnArray {
     }
 
     public String pop(){
+        String string = stack[--count];
         stack[count] = null;
-        if(count > 0 &&  count == stack.length/4) resize(stack.length/2);
-        return stack[--count];
+        if(count > 0 &&  count == stack.length / 4 ) resize(stack.length / 2);
+        return string;
     }
 
 
