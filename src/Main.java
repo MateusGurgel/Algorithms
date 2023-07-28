@@ -2,6 +2,8 @@ import Algorithms.DynamicConnectivity.ImprovedQuickUnionUF;
 import Algorithms.DynamicConnectivity.MyDynamicConnectivity;
 import Algorithms.DynamicConnectivity.QuickFindUF;
 import Algorithms.DynamicConnectivity.QuickUnionUF;
+import Algorithms.Sort.Insertion;
+import Algorithms.Sort.Selection;
 import DataStructures.LinkedStackOfStrings;
 import DataStructures.LinkedStackOfStringsWithAnArray;
 import DataStructures.Queue;
@@ -120,6 +122,15 @@ public class Main {
         System.out.println(queue.isEmpty());
         System.out.println(queue.dequeue());
         System.out.println(queue.isEmpty());
+
+        int[] a = {12,3,421,6,522};
+
+        Insertion.sort(a);
+
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+
 
     }
 }
