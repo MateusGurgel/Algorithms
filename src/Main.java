@@ -2,8 +2,10 @@ import Algorithms.DynamicConnectivity.ImprovedQuickUnionUF;
 import Algorithms.DynamicConnectivity.MyDynamicConnectivity;
 import Algorithms.DynamicConnectivity.QuickFindUF;
 import Algorithms.DynamicConnectivity.QuickUnionUF;
+import Algorithms.Shuffle;
 import Algorithms.Sort.Insertion;
 import Algorithms.Sort.Selection;
+import Algorithms.Sort.Shell;
 import DataStructures.LinkedStackOfStrings;
 import DataStructures.LinkedStackOfStringsWithAnArray;
 import DataStructures.Queue;
@@ -123,12 +125,24 @@ public class Main {
         System.out.println(queue.dequeue());
         System.out.println(queue.isEmpty());
 
+        System.out.println();
+
         int[] a = {12,3,421,6,522};
 
-        Insertion.sort(a);
+        Shell.sort(a);
 
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
+        }
+
+        System.out.println();
+
+        int[] deck = {1, 2, 3, 4};
+
+        Shuffle.shuffle(deck);
+
+        for (int i = 0; i < deck.length; i++) {
+            System.out.println(deck[i]);
         }
 
 
