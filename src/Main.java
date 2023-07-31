@@ -4,6 +4,7 @@ import Algorithms.DynamicConnectivity.QuickFindUF;
 import Algorithms.DynamicConnectivity.QuickUnionUF;
 import Algorithms.Shuffle;
 import Algorithms.Sort.Insertion;
+import Algorithms.Sort.Merge;
 import Algorithms.Sort.Selection;
 import Algorithms.Sort.Shell;
 import DataStructures.LinkedStackOfStrings;
@@ -143,6 +144,16 @@ public class Main {
 
         for (int i = 0; i < deck.length; i++) {
             System.out.println(deck[i]);
+        }
+
+        System.out.println();
+
+        int[] unsortedNumber = {5,4,32,6,7,8,123, 1};
+
+        Merge.sort(unsortedNumber);
+
+        for (int i = 0; i < unsortedNumber.length; i++) {
+            System.out.println(unsortedNumber[i]);
         }
 
 
